@@ -915,11 +915,11 @@ if "confidence" not in st.session_state:
     st.session_state.confidence = 70
 
 if "subject" not in st.session_state:
-    st.session_state.subject = "Embedded Systems"
+    st.session_state.subject = ""
 
 if "topics" not in st.session_state:
     st.session_state.topics = (
-        "8051 Timers, Interrupts, Serial Communication"
+        ""
     )
 
 
@@ -1111,9 +1111,10 @@ if screen == "setup":
         )
 
         subject = st.text_input(
-            "Subject",
-            value=st.session_state.subject,
-            label_visibility="collapsed"
+    "Subject",
+    value=st.session_state.subject,
+    placeholder="Enter subject",
+    label_visibility="collapsed"
         )
 
         st.html(
@@ -1127,10 +1128,11 @@ if screen == "setup":
         )
 
         topics = st.text_area(
-            "Topics",
-            value=st.session_state.topics,
-            height=105,
-            label_visibility="collapsed"
+    "Topics",
+    value=st.session_state.topics,
+    placeholder="Enter subject topics",
+    height=105,
+    label_visibility="collapsed"
         )
 
     with right:
