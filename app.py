@@ -1129,10 +1129,10 @@ if screen == "setup":
 
         topics = st.text_area(
     "Topics",
-    value=st.session_state.topics,
-    placeholder="Enter subject topics",
-    height=105,
-    label_visibility="collapsed"
+    placeholder="e.g. Loops, Functions, Lists, Dictionaries",
+    height=120,
+    help="Enter the key topics you want to test, separated by commas."
+
         )
 
     with right:
