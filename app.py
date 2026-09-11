@@ -485,28 +485,40 @@ footer {
    INPUTS
    ============================================================ */
 
-.stTextInput > div > div,
-.stTextArea > div > div {
+/* ============================================================
+   INPUTS
+   ============================================================ */
+
+.stTextInput [data-baseweb="input"],
+.stTextArea [data-baseweb="textarea"] {
     background: #101827 !important;
-
     border: 1px solid #303b55 !important;
-
-    border-radius: 12px !important;
-
-    transition: all .2s ease;
+    border-radius: 16px !important;
+    box-shadow: none !important;
+    transition: all .25s ease !important;
 }
 
-.stTextInput > div > div:hover,
-.stTextArea > div > div:hover {
+.stTextInput [data-baseweb="input"]:focus-within,
+.stTextArea [data-baseweb="textarea"]:focus-within {
     border-color: #8b5cf6 !important;
-
-    box-shadow:
-        0 0 22px rgba(124,58,237,.12);
+    box-shadow: 0 0 25px rgba(124, 58, 237, .18) !important;
 }
 
 .stTextInput input,
 .stTextArea textarea {
-    color: #ffffff !important;
+    background: transparent !important;
+    color: #f8fafc !important;
+    font-size: 18px !important;
+}
+
+.stTextInput input::placeholder,
+.stTextArea textarea::placeholder {
+    color: #94a3b8 !important;
+    opacity: 1 !important;
+}
+
+.stTextArea textarea {
+    min-height: 105px !important;
 }
 
 
